@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smartphone Basics | Digital Saathi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f8ff;
+    color:#222;
+}
+
+nav{
+    background:#173b72;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav h2{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:7px;
+    font-weight:bold;
+}
+
+.languages{
+    background:white;
+    text-align:center;
+    padding:15px;
+}
+
+.languages button{
+    padding:8px 15px;
+    margin:5px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.hero{
+    text-align:center;
+    padding:50px 8%;
+    background:linear-gradient(135deg,#dfeaff,#fff);
+}
+
+.hero h1{
+    color:#173b72;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.section{
+    padding:40px 8%;
+}
+
+.section h2{
+    text-align:center;
+    color:#173b72;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#173b72;
+    margin-bottom:12px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.steps{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.steps li{
+    margin:10px 0;
+}
+
+.voice{
+    margin-top:15px;
+    padding:10px 18px;
+    border:none;
+    border-radius:20px;
+    background:#173b72;
+    color:white;
+    cursor:pointer;
+}
+
+.note{
+    margin-top:30px;
+    padding:20px;
+    background:#fff4d6;
+    border-radius:12px;
+}
+
+footer{
+    background:#173b72;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>📱 Digital Saathi</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="smartphone.html">Smartphone</a>
+        <a href="whatsapp.html">WhatsApp</a>
+        <a href="payments.html">Payments</a>
+        <a href="safety.html">Safety</a>
+    </div>
+</nav>
+
+<div class="languages">
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('mr')">मराठी</button>
+    <button onclick="changeLanguage('hi')">हिंदी</button>
+</div>
+
+<section class="hero">
+
+    <h1 id="title">📱 Smartphone Basics</h1>
+
+    <p id="intro">
+        Learn simple smartphone features step by step.
+        These skills can make everyday phone use easier.
+    </p>
+
+</section>
+
+<section class="section">
+
+<h2 id="learnTitle">Basic Smartphone Skills</h2>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+<div class="card">
+
+<h3 id="settingsTitle">⚙️ Phone Settings</h3>
+
+<p id="settingsText">
+Learn how to open settings and change basic phone options.
+</p>
+
+<ol class="steps" id="settingsSteps">
+<li>Open the Settings app.</li>
+<li>Choose the required option.</li>
+<li>Change the setting carefully.</li>
+<li>Go back and check the change.</li>
+</ol>
+
+<button class="voice" onclick="speakSettings()">
+🔊 Listen
+</button>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="card">
+
+<h3 id="cameraTitle">📷 Camera</h3>
+
+<p id="cameraText">
+Learn how to take a photo using the smartphone camera.
+</p>
+
+<ol class="steps" id="cameraSteps">
+<li>Open the Camera app.</li>
+<li>Point the camera at the object.</li>
+<li>Tap the camera button.</li>
+<li>Open Gallery to see the photo.</li>
+</ol>
+
+<button class="voice" onclick="speakCamera()">
+🔊 Listen
+</button>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="card">
+
+<h3 id="callsTitle">📞 Making a Call</h3>
+
+<p id="callsText">
+Learn how to find a contact and make a phone call.
+</p>
+
+<ol class="steps" id="callsSteps">
+<li>Open the Phone app.</li>
+<li>Open Contacts.</li>
+<li>Select the person.</li>
+<li>Tap the call button.</li>
+</ol>
+
+<button class="voice" onclick="speakCalls()">
+🔊 Listen
+</button>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="card">
+
+<h3 id="languageTitle">🌐 Phone Language</h3>
+
+<p id="languageText">
+Learn how to change the phone language according to your comfort.
+</p>
+
+<ol class="steps" id="languageSteps">
+<li>Open Settings.</li>
+<li>Go to Language or System.</li>
+<li>Select Languages.</li>
+<li>Choose your preferred language.</li>
+</ol>
+
+<button class="voice" onclick="speakLanguage()">
+🔊 Listen
+</button>
+
+</div>
+
+</div>
+
+<div class="note">
+
+<h3 id="noteTitle">💡 Important Tip</h3>
+
+<p id="noteText">
+Change only settings that you understand. If you are unsure,
+ask a trusted family member or trainer for help.
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>Digital Saathi | Digital Literacy Training for Senior Citizens</p>
+
+<p>Learn • Practice • Use Technology Confidently</p>
+
+</footer>
+
+
+<script>
+
+let currentLanguage = "en";
+
+
+function speak(text,language){
+
+    window.speechSynthesis.cancel();
+
+    let speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = language;
+
+    speech.rate = 0.9;
+
+    window.speechSynthesis.speak(speech);
+}
+
+
+function speakSettings(){
+
+    if(currentLanguage=="mr"){
+        speak(
+        "सेटिंग्स अॅप उघडा. आवश्यक पर्याय निवडा. सेटिंग काळजीपूर्वक बदला. नंतर परत जाऊन बदल तपासा.",
+        "mr-IN");
+    }
+
+    else if(currentLanguage=="hi"){
+        speak(
+        "सेटिंग्स ऐप खोलें। आवश्यक विकल्प चुनें। सेटिंग को ध्यान से बदलें। फिर वापस जाकर बदलाव देखें.",
+        "hi-IN");
+    }
+
+    else{
+        speak(
+        "Open the Settings app. Choose the required option. Change the setting carefully. Go back and check the change.",
+        "en-IN");
+    }
+}
+
+
+function speakCamera(){
+
+    if(currentLanguage=="mr"){
+        speak(
+        "कॅमेरा अॅप उघडा. वस्तूकडे कॅमेरा ठेवा. कॅमेरा बटन दाबा. गॅलरीमध्ये फोटो पाहा.",
+        "mr-IN");
+    }
+
+    else if(currentLanguage=="hi"){
+        speak(
+        "कैमरा ऐप खोलें। वस्तु की तरफ कैमरा रखें। कैमरा बटन दबाएं। गैलरी में फोटो देखें.",
+        "hi-IN");
+    }
+
+    else{
+        speak(
+        "Open the Camera app. Point the camera at the object. Tap the camera button. Open Gallery to see the photo.",
+        "en-IN");
+    }
+}
+
+
+function speakCalls(){
+
+    if(currentLanguage=="mr"){
+        speak(
+        "फोन अॅप उघडा. कॉन्टॅक्ट्स उघडा. व्यक्ती निवडा. कॉल बटन दाबा.",
+        "mr-IN");
+    }
+
+    else if(currentLanguage=="hi"){
+        speak(
+        "फोन ऐप खोलें। कॉन्टैक्ट्स खोलें। व्यक्ति को चुनें। कॉल बटन दबाएं.",
+        "hi-IN");
+    }
+
+    else{
+        speak(
+        "Open the Phone app. Open Contacts. Select the person. Tap the call button.",
+        "en-IN");
+    }
+}
+
+
+function speakLanguage(){
+
+    if(currentLanguage=="mr"){
+        speak(
+        "सेटिंग्स उघडा. भाषा किंवा सिस्टममध्ये जा. भाषा निवडा. तुमची आवडती भाषा निवडा.",
+        "mr-IN");
+    }
+
+    else if(currentLanguage=="hi"){
+        speak(
+        "सेटिंग्स खोलें। भाषा या सिस्टम में जाएं। भाषाएं चुनें। अपनी पसंदीदा भाषा चुनें.",
+        "hi-IN");
+    }
+
+    else{
+        speak(
+        "Open Settings. Go to Language or System. Select Languages. Choose your preferred language.",
+        "en-IN");
+    }
+}
+
+
+function changeLanguage(lang){
+
+    currentLanguage = lang;
+
+    if(lang=="mr"){
+
+        document.getElementById("title").innerText =
+        "📱 स्मार्टफोनची मूलभूत माहिती";
+
+        document.getElementById("intro").innerText =
+        "स्मार्टफोनची सोपी माहिती स्टेप-बाय-स्टेप शिका.";
+
+        document.getElementById("learnTitle").innerText =
+        "स्मार्टफोनची मूलभूत कौशल्ये";
+
+        document.getElementById("settingsTitle").innerText =
+        "⚙️ फोन सेटिंग्स";
+
+        document.getElementById("settingsText").innerText =
+        "सेटिंग्स उघडून फोनमधील मूलभूत पर्याय कसे बदलायचे ते शिका.";
+
+        document.getElementById("cameraTitle").innerText =
+        "📷 कॅमेरा";
+
+        document.getElementById("cameraText").innerText =
+        "स्मार्टफोनच्या कॅमेऱ्याने फोटो कसा काढायचा ते शिका.";
+
+        document.getElementById("callsTitle").innerText =
+        "📞 फोन कॉल";
+
+        document.getElementById("callsText").innerText =
+        "कॉन्टॅक्ट शोधून फोन कॉल कसा करायचा ते शिका.";
+
+        document.getElementById("languageTitle").innerText =
+        "🌐 फोनची भाषा";
+
+        document.getElementById("languageText").innerText =
+        "तुमच्या सोयीप्रमाणे फोनची भाषा कशी बदलायची ते शिका.";
+
+        document.getElementById("noteTitle").innerText =
+        "💡 महत्त्वाची सूचना";
+
+        document.getElementById("noteText").innerText =
+        "तुम्हाला माहिती असलेल्या सेटिंग्सच बदला. शंका असल्यास कुटुंबातील विश्वासू व्यक्ती किंवा प्रशिक्षकाची मदत घ्या.";
+    }
+
+
+    else if(lang=="hi"){
+
+        document.getElementById("title").innerText =
+        "📱 स्मार्टफोन की मूल बातें";
+
+        document.getElementById("intro").innerText =
+        "स्मार्टफोन की आसान जानकारी स्टेप-बाय-स्टेप सीखें।";
+
+        document.getElementById("learnTitle").innerText =
+        "स्मार्टफोन की मूलभूत कौशल";
+
+        document.getElementById("settingsTitle").innerText =
+        "⚙️ फोन सेटिंग्स";
+
+        document.getElementById("settingsText").innerText =
+        "सेटिंग्स खोलकर फोन के मूल विकल्प बदलना सीखें।";
+
+        document.getElementById("cameraTitle").innerText =
+        "📷 कैमरा";
+
+        document.getElementById("cameraText").innerText =
+        "स्मार्टफोन कैमरे से फोटो लेना सीखें।";
+
+        document.getElementById("callsTitle").innerText =
+        "📞 फोन कॉल";
+
+        document.getElementById("callsText").innerText =
+        "कॉन्टैक्ट ढूंढकर फोन कॉल करना सीखें।";
+
+        document.getElementById("languageTitle").innerText =
+        "🌐 फोन की भाषा";
+
+        document.getElementById("languageText").innerText =
+        "अपनी सुविधा के अनुसार फोन की भाषा बदलना सीखें।";
+
+        document.getElementById("noteTitle").innerText =
+        "💡 महत्वपूर्ण सूचना";
+
+        document.getElementById("noteText").innerText =
+        "केवल वही सेटिंग बदलें जिसे आप समझते हैं। जरूरत होने पर परिवार के विश्वसनीय सदस्य या ट्रेनर की मदद लें।";
+    }
+
+
+    else{
+
+        document.getElementById("title").innerText =
+        "📱 Smartphone Basics";
+
+        document.getElementById("intro").innerText =
+        "Learn simple smartphone features step by step. These skills can make everyday phone use easier.";
+
+        document.getElementById("learnTitle").innerText =
+        "Basic Smartphone Skills";
+
+        document.getElementById("settingsTitle").innerText =
+        "⚙️ Phone Settings";
+
+        document.getElementById("settingsText").innerText =
+        "Learn how to open settings and change basic phone options.";
+
+        document.getElementById("cameraTitle").innerText =
+        "📷 Camera";
+
+        document.getElementById("cameraText").innerText =
+        "Learn how to take a photo using the smartphone camera.";
+
+        document.getElementById("callsTitle").innerText =
+        "📞 Making a Call";
+
+        document.getElementById("callsText").innerText =
+        "Learn how to find a contact and make a phone call.";
+
+        document.getElementById("languageTitle").innerText =
+        "🌐 Phone Language";
+
+        document.getElementById("languageText").innerText =
+        "Learn how to change the phone language according to your comfort.";
+
+        document.getElementById("noteTitle").innerText =
+        "💡 Important Tip";
+
+        document.getElementById("noteText").innerText =
+        "Change only settings that you understand. If you are unsure, ask a trusted family member or trainer for help.";
+    }
+}
+
+</script>
+
+</body>
+</html>
